@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+:root {
+	overflow-wrap: break-word;
+	font-family: InterVariable, "Noto Sans SC", system-ui, sans-serif;
+	line-height: 1.4;
+	color-scheme: light dark;
+	font-variant-alternates: styleset(open-digits, disambiguation, round-quotes-and-commas);
+
+	@media screen {
+		// 210mm - 2 * 10mm - 2 * ((print:p2 - p6) / 4)rem
+		max-width: calc(19cm + 2rem);
+		margin: 1em auto;
+		background-color: #0055FF08;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: currentcolor;
+}
+
+p, li {
+	opacity: 0.9;
+}
+
+code, pre {
+	/* stylelint-disable-next-line font-family-name-quotes */
+	font-family: "JetBrains Mono", "Cascadia Code", "monospace", "Noto Sans Mono", Consolas, monospace;
+}
+
+menu, ol, ul {
+	padding-inline-start: 1em;
+}
+
+li {
+	margin: 0.25em 0;
+}
+
+// Iconify 图标复用了此类
+:where(.iconify) {
+	display: inline-block;
+	flex-shrink: 0;
+	font-size: 1.2em;
+	vertical-align: text-bottom;
+}

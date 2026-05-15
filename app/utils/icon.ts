@@ -1,0 +1,43 @@
+// @keep-sorted
+const techMap = {
+	'Active Directory': 'logos:microsoft-windows',
+	'AntSword': 'ri:tools-line',
+	'Axios': 'simple-icons:axios',
+	'Burp Suite': 'simple-icons:burpsuite',
+	'CentOS': 'logos:centos',
+	'Cobalt Strike': 'ri:sword-line',
+	'DNS': 'ri:global-line',
+	'Electron': 'file-icons:electron',
+	'FTP': 'ri:file-transfer-line',
+	'GPO': 'ri:settings-5-line',
+	'IIS': 'simple-icons:microsoft',
+	'IPsec VPN': 'ri:shield-keyhole-line',
+	'JWT': 'logos:jwt-icon',
+	'Kali Linux': 'logos:kali-linux',
+	'Mimikatz': 'ri:spy-line',
+	'Mongoose': 'devicon:mongoose-wordmark',
+	'MySQL': 'logos:mysql',
+	'NaiveUI': 'logos:naiveui',
+	'NAT': 'ri:router-line',
+	'Nginx': 'logos:nginx',
+	'Nitro': 'unjs:nitro',
+	'Nmap': 'ri:radar-line',
+	'Nuxt': 'vscode-icons:file-type-nuxt',
+	'OSPF': 'ri:route-line',
+	'Pinia': 'logos:pinia',
+	'RBAC': 'ri:user-settings-line',
+	'Scss': 'vscode-icons:file-type-scss',
+	'Spring Boot': 'logos:spring-icon',
+	'Telnet': 'ri:terminal-box-line',
+	'TypeScript': 'vscode-icons:file-type-typescript-official',
+	'UnoCSS': 'logos:unocss',
+	'VitePress': 'simple-icons:vitepress',
+	'VLAN': 'ri:node-tree',
+	'Vue 3': 'logos:vue',
+	'VueUse': 'logos:vueuse',
+	'Wireshark': 'simple-icons:wireshark',
+}
+
+export type Tech = keyof typeof techMap
+
+export const getTechIcon = (tech: Tech) => techMap[tech] || 'ri:code-line'
