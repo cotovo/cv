@@ -1,11 +1,23 @@
 <script setup lang="ts">
 const publicConfig = useRuntimeConfig().public
 
-const name = publicConfig.name || '**璐'
-const phone = publicConfig.phone || '133****9192'
+const rawName = publicConfig.name || '陈桂涛'
+const rawPhone = publicConfig.phone || '18671188011'
+const rawBirth = '2006.10'
+const rawEmail = 'cotovo@163.com'
+const rawSchool = '武汉软件工程职业技术学院'
+const rawMajor = '信息安全技术应用 (专科 / 2027 届)'
+
+const name = rawName.length > 2 ? `${rawName[0]}*${rawName.slice(-1)}` : `${rawName[0]}*`
+const phone = rawPhone.replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2')
+const [emailUser = '', emailDomain = ''] = rawEmail.split('@')
+const email = (emailUser && emailDomain) ? `${emailUser.charAt(0)}****${emailUser.slice(-1)}@${emailDomain}` : rawEmail
+const birth = rawBirth.replace(/\.\d+$/, '.**')
+const school = rawSchool.length > 4 ? `${rawSchool.slice(0, 2)}****${rawSchool.slice(-2)}` : rawSchool
+const major = rawMajor.replace(/安全技术应用/, '****').replace(/专科/, '**').replace(/2027/, '20**')
 
 useSeoMeta({
-	title: `${name} - 安全服务 / 渗透测试实习`,
+	title: '简历',
 	description: `${name}的个人简历 - 信息安全技术应用`,
 	robots: 'noindex, nofollow',
 })
@@ -30,7 +42,7 @@ useSeoMeta({
 		</InfoLi>
 
 		<InfoLi icon="ri:calendar-line" label="出生年月">
-			2006.10
+			{{ birth }}
 		</InfoLi>
 
 		<InfoLi icon="ri:smartphone-line" label="电话">
@@ -38,15 +50,17 @@ useSeoMeta({
 		</InfoLi>
 
 		<InfoLi icon="ri:mail-line" label="邮箱">
-			<InfoLink to="mailto:cotovo@163.com" />
+			<InfoLink :to="`mailto:${rawEmail}`">
+				{{ email }}
+			</InfoLink>
 		</InfoLi>
 
 		<InfoLi icon="ri:school-line" label="学校">
-			武汉软件工程职业技术学院
+			{{ school }}
 		</InfoLi>
 
 		<InfoLi icon="ri:graduation-cap-line" label="专业">
-			信息安全技术应用 (专科 / 2027 届)
+			{{ major }}
 		</InfoLi>
 	</ul>
 
