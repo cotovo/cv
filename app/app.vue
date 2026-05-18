@@ -130,6 +130,13 @@ useSeoMeta({
 		</Project>
 	</InfoSection>
 
+	<InfoSection title="资格证书">
+		<ul p="is-0">
+			<li><b>深信服安全技术认证助理工程师 (Pre-A)：</b>PREA260518095828011</li>
+			<li><b>深信服安全技术认证助理工程师 (Pre-A)：</b>PREA260518095768011</li>
+		</ul>
+	</InfoSection>
+
 	<InfoSection title="自我评价">
 		<ul p="is-0">
 			<li>熟练掌握 Web 渗透、内网攻防及 C2 持久化，具备独立完成外网突破到全域接管的实战能力。</li>
