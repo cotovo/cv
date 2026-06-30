@@ -1,4 +1,4 @@
-# 纸鹿的个人简历
+# CoT的个人简历
 
 [![在线预览](https://img.shields.io/badge/在线预览-cv.cot.wiki-blue)](https://cv.cot.wiki)
 
